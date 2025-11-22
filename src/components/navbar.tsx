@@ -32,8 +32,8 @@ const Navbar = () => {
   };
 
   return (
-    <section className="absolute top-0 left-0 right-0 z-30 py-4">
-      <div className="container mx-auto max-w-[85rem]">
+    <section className="absolute top-0 left-0 right-0 z-30 py-8">
+      <div className="container mx-auto max-w-[85rem] max-[1399px]:px-[120px] max-[1039px]:px-[72px]">
         <nav className="flex items-center justify-between">
           <a
             href="/"
@@ -45,25 +45,25 @@ const Navbar = () => {
               alt="We Love Car Insurance Logo"
             />
           </a>
-          <div className="hidden items-center gap-6 lg:flex">
+          <div className="hidden items-center gap-4 lg:flex">
             <a
               href="#intro"
               onClick={(e) => handleScroll(e, "intro")}
-              className="text-sm font-medium text-white transition-all px-4 py-2 hover:rounded-full hover:border hover:border-white whitespace-nowrap"
+              className="text-m font-medium text-white hover:text-white transition-all px-4 py-2 hover:rounded-full hover:border hover:border-white whitespace-nowrap"
             >
               Onze aanpak
             </a>
             <a
               href="#why"
               onClick={(e) => handleScroll(e, "why")}
-              className="text-sm font-medium text-white transition-all px-4 py-2 hover:rounded-full hover:border hover:border-white whitespace-nowrap"
+              className="text-m font-medium text-white hover:text-white transition-all px-4 py-2 hover:rounded-full hover:border hover:border-white whitespace-nowrap"
             >
               Over ons
             </a>
             <a
               href="#footer"
               onClick={(e) => handleScroll(e, "footer")}
-              className="text-sm font-medium text-white transition-all px-4 py-2 hover:rounded-full hover:border hover:border-white whitespace-nowrap"
+              className="text-m font-medium text-white hover:text-white transition-all px-4 py-2 hover:rounded-full hover:border hover:border-white whitespace-nowrap"
             >
               Neem contact op
             </a>
@@ -71,21 +71,21 @@ const Navbar = () => {
           <div className="hidden items-center gap-4 lg:flex">
             <Button 
               variant="outline" 
-              className="h-10 bg-[var(--color-dark)] text-white border-[var(--color-dark)] hover:bg-[var(--color-dark)]/90 hover:text-white"
+              className="h-10 bg-[#3CB2D0] text-white hover:bg-[#286F81] hover:text-white"
               onClick={() => setIsUploadModalOpen(true)}
             >
               Upload polis
             </Button>
-            <Button asChild className="h-10 bg-[var(--color-dark)] text-white hover:bg-[var(--color-dark)]/90" size="icon">
+            <Button asChild className="h-10 bg-[#3CB2D0] text-white hover:bg-[#286F81] hover:text-white hover:[&_svg]:text-white" size="icon">
               <a href="mailto:hello@welovecarinsurance.nl" aria-label="Stuur een e-mail">
-                <Mail className="h-4 w-4" />
+                <Mail className="h-4 w-4 text-white" />
               </a>
             </Button>
           </div>
           <Sheet>
             <SheetTrigger asChild className="lg:hidden">
-              <Button variant="outline" size="icon">
-                <MenuIcon className="h-4 w-4" />
+              <Button variant="outline" size="icon" className="border-0 bg-[#3CB2D0] text-white hover:bg-[#286F81] hover:text-white hover:[&_svg]:text-white">
+                <MenuIcon className="h-4 w-4 text-white" />
               </Button>
             </SheetTrigger>
             <SheetContent side="top" className="max-h-screen overflow-auto">
@@ -128,10 +128,10 @@ const Navbar = () => {
                   </a>
                 </div>
                 <div className="mt-6 flex flex-col gap-4">
-                  <Button variant="outline" onClick={() => setIsUploadModalOpen(true)}>Upload polis</Button>
-                  <Button asChild size="icon">
+                  <Button variant="outline" className="bg-[#3CB2D0] text-white hover:bg-[#286F81] hover:text-white" onClick={() => setIsUploadModalOpen(true)}>Upload polis</Button>
+                  <Button asChild className="bg-[#3CB2D0] text-white hover:bg-[#286F81] hover:text-white hover:[&_svg]:text-white" size="icon">
                     <a href="mailto:hello@welovecarinsurance.nl" aria-label="Stuur een e-mail">
-                      <Mail className="h-4 w-4" />
+                      <Mail className="h-4 w-4 text-white" />
                     </a>
                   </Button>
                 </div>

@@ -24,7 +24,7 @@ const DialogOverlay = React.forwardRef<
       className
     )}
     style={{
-      backgroundColor: 'rgba(24, 35, 49, 0.8)', // --color-dark: #182331 with 80% opacity
+      backgroundColor: 'rgba(41, 41, 41, 0.8)', // --color-dark: #292929 with 80% opacity
     }}
     {...props}
   />

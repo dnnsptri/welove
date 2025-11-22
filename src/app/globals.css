@@ -54,59 +54,83 @@
 @layer base {
   * {
     @apply border-border;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  html {
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
   
   body {
     @apply bg-background text-foreground;
     font-family: 'Manrope', sans-serif;
-    font-weight: 500;
+    font-weight: 400;
+    font-size: 1rem;
     color: var(--color-dark);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
   
   h1 {
     font-family: 'Manrope', sans-serif;
-    font-weight: 700;
+    font-weight: 600;
+    font-size: 2.5rem;
     color: var(--color-dark);
   }
   
   h2 {
     font-family: 'Manrope', sans-serif;
-    font-weight: 700;
+    font-weight: 600;
+    font-size: 2rem;
     color: var(--color-dark);
   }
   
   h3 {
     font-family: 'Manrope', sans-serif;
-    font-weight: 600;
+    font-weight: 500;
+    font-size: 1.75rem;
     color: var(--color-dark);
   }
   
   h4 {
     font-family: 'Manrope', sans-serif;
-    font-weight: 600;
+    font-weight: 500;
+    font-size: 1.5rem;
     color: var(--color-dark);
   }
   
   h5 {
     font-family: 'Manrope', sans-serif;
-    font-weight: 600;
+    font-weight: 500;
+    font-size: 1.25rem;
     color: var(--color-dark);
   }
   
   h6 {
     font-family: 'Manrope', sans-serif;
-    font-weight: 600;
+    font-weight: 500;
+    font-size: 1rem;
     color: var(--color-dark);
   }
   
   p {
     font-family: 'Manrope', sans-serif;
-    font-weight: 500;
+    font-weight: 400;
     color: var(--color-dark);
   }
   
   a {
     color: var(--color-dark);
+    transition: color 0.2s ease;
+  }
+  
+  a:hover {
+    color: var(--color-hover);
   }
   
   li {
@@ -125,6 +149,22 @@
   b {
     font-family: 'Manrope', sans-serif;
     font-weight: 700;
+  }
+}
+
+/* Responsive container spacing - proportional scaling */
+/* At 1680px viewport: 160px left/right spacing, scales proportionally on smaller screens */
+/* This applies to containers with max-w-[85rem] (1360px) */
+.container.max-w-\[85rem\] {
+  padding-left: clamp(72px, calc((100vw - 1360px) / 2), 160px);
+  padding-right: clamp(72px, calc((100vw - 1360px) / 2), 160px);
+}
+
+/* For all containers, provide proportional left/right spacing */
+@layer components {
+  .container {
+    padding-left: clamp(72px, calc((100vw - 1360px) / 2), 160px);
+    padding-right: clamp(72px, calc((100vw - 1360px) / 2), 160px);
   }
 }
 
@@ -193,7 +233,8 @@
   --color-secondary: hsl(210 40% 96.1%);
   --color-accent: hsl(217.2 32.6% 17.5%);
   --color-light-grey: #EAECEE;
-  --color-light-blue: #4E6994;
-  --color-dark: #182331;
+  --color-light-blue: #3CB2D0;
+  --color-dark: #292929;
+  --color-hover: #286F81;
 }
 

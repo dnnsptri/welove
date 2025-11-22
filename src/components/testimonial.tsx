@@ -17,21 +17,28 @@ import {
 const testimonials = [
   {
     name: "9,1",
-    role: "Afsluiten nieuwe verzekering",
     content:
       "Fantastische kerel, snel, vlot en eerlijk. Heel prettig allemaal.",
   },
   {
+    name: "10",
+    content:
+      "Wij bespaarden op onze drie auto’s in totaal maar liefst € 655,30! En dat met 1 telefoontje en het mailen van onze polissen.",
+  },
+  {
     name: "9,9",
-    role: "Afsluiten nieuwe verzekering",
+    content:
+      "Altijd één vast aanspreekpunt, een verademing in deze tijd.",
+  },
+  {
+    name: "9,9",
     content:
       "Top geholpen, gewoonweg een zeer goed gevoel erbij",
   },
   {
-    name: "9,1",
-    role: "Afsluiten nieuwe verzekering",
+    name: "9,0",
     content:
-      "Prima adviseur, ter zake kundig en snel van handelen.",
+      "Erg goed geholpen, wij bleken al een scherpe premie te hebben en advies was dan ook om die polis aan te houden, nog nooit meegemaakt!",
   },
 ];
 
@@ -40,6 +47,8 @@ const Testimonial = () => {
     AutoScroll({
       startDelay: 500,
       speed: 0.7,
+      stopOnInteraction: false,
+      stopOnMouseEnter: true,
     }),
   );
 
@@ -55,8 +64,10 @@ const Testimonial = () => {
           <Carousel
             opts={{
               loop: true,
+              align: "start",
             }}
             plugins={[plugin.current]}
+            onMouseEnter={() => plugin.current.stop()}
             onMouseLeave={() => plugin.current.play()}
             className="before:bg-linear-to-r before:from-background after:bg-linear-to-l after:from-background relative before:absolute before:bottom-0 before:left-0 before:top-0 before:z-10 before:w-36 before:to-transparent after:absolute after:bottom-0 after:right-0 after:top-0 after:z-10 after:w-36 after:to-transparent"
           >
@@ -64,14 +75,9 @@ const Testimonial = () => {
               {testimonials.map((testimonial, index) => (
                 <CarouselItem key={index} className="basis-auto">
                   <Card className="max-w-96 select-none p-6">
-                    <div className="flex justify-between mb-4">
-                      <div>
-                        <p className="font-medium text-[var(--color-dark)]">{testimonial.name}</p>
-                        <p className="text-[var(--color-dark)] text-sm opacity-70">
-                          {testimonial.role}
-                        </p>
-                      </div>
-                      <div className="flex gap-1">
+                    <div className="flex flex-col items-center mb-4">
+                      <p className="font-bold text-[24px] text-[var(--color-dark)] text-center">{testimonial.name}</p>
+                      <div className="flex gap-1 mt-2">
                         <Star className="size-5 fill-[var(--color-light-blue)] text-[var(--color-light-blue)]" />
                         <Star className="size-5 fill-[var(--color-light-blue)] text-[var(--color-light-blue)]" />
                         <Star className="size-5 fill-[var(--color-light-blue)] text-[var(--color-light-blue)]" />
@@ -79,7 +85,7 @@ const Testimonial = () => {
                         <Star className="size-5 fill-[var(--color-light-blue)] text-[var(--color-light-blue)]" />
                       </div>
                     </div>
-                    <q className="text-[var(--color-dark)] leading-7">
+                    <q className="text-[var(--color-dark)] leading-7 text-center block">
                       {testimonial.content}
                     </q>
                   </Card>

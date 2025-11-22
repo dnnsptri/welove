@@ -134,7 +134,7 @@ const UploadModal = ({ open, onOpenChange }: UploadModalProps) => {
                       }
                     }}
                   />
-                  <Button variant="outline" size="lg" type="button" className="w-full" asChild>
+                  <Button variant="outline" size="lg" type="button" className="w-full border-0 rounded-[2px] hover:bg-transparent hover:text-current hover:scale-100 hover:shadow-sm" asChild>
                     <label htmlFor="documentation-upload" className="cursor-pointer flex items-center justify-center">
                       {documentationFiles.length > 0 
                         ? documentationFiles.map(f => f.name).join(', ')
@@ -160,7 +160,7 @@ const UploadModal = ({ open, onOpenChange }: UploadModalProps) => {
                   <Button 
                     type="submit"
                     size="lg" 
-                    className="w-full bg-[var(--color-dark)] text-white hover:bg-[var(--color-dark)]/90 flex items-center justify-center"
+                    className="w-full bg-[#3CB2D0] text-white hover:bg-[#286F81] flex items-center justify-center border-0"
                     disabled={isSubmitting || isSent}
                   >
                     <Upload className="mr-2 h-5 w-5" />

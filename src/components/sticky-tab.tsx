@@ -74,7 +74,7 @@ const StickyTab = () => {
     >
       <a
         href="#"
-        className="flex items-center text-[var(--color-light-blue)] transition-all hover:text-[var(--color-dark)]"
+        className="flex items-center text-[var(--color-light-blue)] transition-all hover:text-[#286F81]"
         style={{ writingMode: 'vertical-rl', textOrientation: 'mixed', transform: 'rotate(180deg)' }}
         aria-label="We 💙 Car Insurance"
       >

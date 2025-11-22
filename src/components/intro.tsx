@@ -16,19 +16,19 @@ const Intro = () => {
               Jouw autoverzekering,<br />opnieuw uitgevonden
             </h2>
             <p className="md:text-lg">
-            Niet zelf een premie berekenen en vergelijken. Dat doen wij voor jou, allemaal na het uploaden van jouw huidige polis of voorstel.<br />En zit je goed, dan laten we je dat uiteraard weten.
+              Niet zelf een premie berekenen en vergelijken op een website. Dat doen wij voor jou, allemaal na het uploaden van je meest recente polis.<br />En zit je goed, dan laten we je dat uiteraard ook weten. Geen punt.
             </p>
             <div className="mt-11 flex flex-col justify-center gap-2 sm:flex-row">
               <Button 
                 size="lg" 
-                className="bg-[var(--color-light-blue)] text-white hover:bg-[var(--color-light-blue)]/90"
+                className="bg-[var(--color-light-blue)] text-white hover:bg-[#286F81] border-0 h-14 px-10 text-base"
                 onClick={() => setIsUploadModalOpen(true)}
               >
                 Upload polis
               </Button>
             </div>
             <div className="mt-4 flex justify-center">
-              <a href="mailto:hello@welovecarinsurance.nl" className="text-sm font-medium text-[var(--color-light-blue)] hover:underline">
+              <a href="mailto:hello@welovecarinsurance.nl" className="text-sm font-medium text-[var(--color-light-blue)] hover:underline hover:text-[#286F81]">
                 Ik stuur toch liever een e-mail
               </a>
             </div>

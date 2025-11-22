@@ -36,7 +36,7 @@ const BackToTop = () => {
   return (
     <button
       onClick={scrollToTop}
-      className="fixed bottom-8 right-8 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-[var(--color-light-blue)] text-white shadow-lg transition-all hover:bg-[var(--color-dark)] hover:scale-110 hover:shadow-xl"
+      className="fixed bottom-8 right-8 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-[var(--color-light-blue)] text-white shadow-lg transition-all hover:bg-[#286F81] hover:scale-110 hover:shadow-xl"
       aria-label="Back to top"
     >
           <ArrowUp className="h-5 w-5 text-white" />
