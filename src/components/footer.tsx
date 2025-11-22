@@ -15,15 +15,15 @@ const Footer = ({
   return (
     <section id="footer" className="py-16">
       <div className="container mx-auto max-w-[85rem] max-[1399px]:px-[120px] max-[1039px]:px-[72px]">
-        <div className="grid w-full grid-cols-1 gap-10 lg:grid-cols-3 lg:gap-6 lg:items-start lg:text-left">
+        <div className="grid w-full grid-cols-1 gap-10 lg:grid-cols-[2fr_1fr_1fr] lg:gap-6 lg:items-start lg:text-left">
           <div className="flex w-full flex-col gap-6 lg:items-start">
-            <h2 className="text-3xl font-semibold lg:text-4xl">
+            <h2 className="text-3xl font-semibold lg:text-4xl whitespace-nowrap">
               Zo kun je ons bereiken
             </h2>
             <p className="text-[var(--color-dark)] max-w-xl text-sm lg:text-base">
               Hiernaast vind je alle gegevens voor meer informatie, inspiratie of een persoonlijke kennismaking.
             </p>
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-1">
               <p className="font-semibold text-[var(--color-dark)]">WeLoveCarInsurance.nl</p>
               <p className="text-[var(--color-dark)] text-sm">KvK: 57298149</p>
               <p className="text-[var(--color-dark)] text-sm">AFM: 12042573</p>
